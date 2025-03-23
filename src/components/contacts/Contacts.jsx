@@ -33,12 +33,12 @@ const Contacts = () => {
           <article className='contact__option'>
             <MdLocalPhone  className='contact__option-icon'/>
             <h5>+91-9935522137</h5>
-            <a href="callto:hemantchaurasia555@gmail.com">Call</a>
+            <a href="tel: +919935522137">Call</a>
           </article>
           <article className='contact__option'>
             <MdLocationOn  className='contact__option-icon'/>
             <h5>Laxmi Nagar, Delhi, India</h5>
-            {/* <a href="mailto:hemantchaurasia555@gmail.com">Send a message</a> */}
+            <a href="https://www.google.co.in/maps/place/Laxmi+Nagar/@28.6306847,77.2750451,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfcad2277af63:0xa44f8b23c84bd369!8m2!3d28.63068!4d77.27762!16s%2Fg%2F11cjhc15fb?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D">location</a>
           </article>
         </div>
 
