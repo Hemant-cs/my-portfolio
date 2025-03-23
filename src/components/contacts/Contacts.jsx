@@ -1,6 +1,6 @@
 import React from 'react'
 import './contacts.css'
-import {MdOutlineEmail} from 'react-icons/md'
+import {MdOutlineEmail, MdLocalPhone, MdLocationOn} from 'react-icons/md'
 import { useRef } from 'react';
 // import emailjs from '@emailjs/browser';
 
@@ -27,9 +27,18 @@ const Contacts = () => {
 
           <article className='contact__option'>
             <MdOutlineEmail className='contact__option-icon'/>
-            <h4>Email</h4>
             <h5>hemantchaurasia555@gmail.com</h5>
             <a href="mailto:hemantchaurasia555@gmail.com">Send a message</a>
+          </article>
+          <article className='contact__option'>
+            <MdLocalPhone  className='contact__option-icon'/>
+            <h5>+91-9935522137</h5>
+            <a href="callto:hemantchaurasia555@gmail.com">Call</a>
+          </article>
+          <article className='contact__option'>
+            <MdLocationOn  className='contact__option-icon'/>
+            <h5>Laxmi Nagar, Delhi, India</h5>
+            {/* <a href="mailto:hemantchaurasia555@gmail.com">Send a message</a> */}
           </article>
         </div>
 
