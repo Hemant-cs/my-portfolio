@@ -16,7 +16,8 @@ const Myprojects = () => {
             <div className="portfolio__item-image">
                 <img src={IMG1} alt="" />
             </div>
-            <h3>Bank of Scotia</h3>
+            <h3>Bank of Scotia - Assistant System Engineer @ TCS</h3>
+            <h4>11/2021 - 11/2022</h4>
             <small className='text-light'>ReactJs | Redux | BitBucket | JIRA | Agile</small>
             <div className="portfolio__item-cta">
               <small className='text-light'>
@@ -34,7 +35,8 @@ const Myprojects = () => {
             <div className="portfolio__item-image">
                 <img src={IMG2} alt="" />
             </div>
-            <h3>Bank of Montreal</h3>
+            <h3>Bank of Montreal - System Engineer @ TCS</h3>
+            <h4>12/2022 - PRESENT</h4>
             <small className='text-light'>NodeJS | AWS | GitHub | Elastic Search | DynamoDb</small>
             <div className="portfolio__item-cta">
               <small className='text-light'>

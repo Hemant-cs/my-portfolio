@@ -7,7 +7,7 @@ import {BsMedium} from 'react-icons/bs'
 const Footer = () => {
   return (
     <footer>
-        <a href="#home" className='footer__logo'>HEMANT</a>
+        <a href="#home" className='footer__logo'>HEMANT CS</a>
         <ul className="permalinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__copyright">
-            <small>&copy; Hemant Chaurasia. All rightts reserved.</small>
+            <small>Crafted with {"\u2764\uFE0F"} by Hemant &copy; {new Date().getFullYear()}. All rights reserved.</small>
         </div>
     </footer>
   )
