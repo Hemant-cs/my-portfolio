@@ -1,20 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contacts.css'
 import {MdOutlineEmail, MdLocalPhone, MdLocationOn} from 'react-icons/md'
 import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 // import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
 
   const form = useRef()
+  //states
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  //functions
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    console.log(fullName, email, message);
+    const emailData = {
+      user_name: fullName,
+      user_email: email,
+      message: message
+    } 
 
-  //   emailjs.sendForm('service_kpzxgqz', 'template_kk9ipl8', form.current, 'uKELRhBOpArKOozDJ')
-  //   e.target.reset()
+    emailjs.send(
+      'service_g8hfqjr',      // from EmailJS dashboard
+      'template_11q7g4k',     // from EmailJS dashboard
+      emailData,
+      'cqpP-3wGHmgu6F0oD'       // from EmailJS dashboard
+    ).then((result) => {
+      alert('Email sent successfully!');
+      setEmail("");
+      setFullName("");
+      setMessage("");
+    }, (error) => {
+      alert('Failed to send email. Try again.');
+    });
     
-  // }
+  }
 
   return (
     <section id='contacts'>
@@ -27,7 +50,7 @@ const Contacts = () => {
 
           <article className='contact__option'>
             <MdOutlineEmail className='contact__option-icon'/>
-            <h5>hemantchaurasia555@gmail.com</h5>
+            <h5 style={{marginLeft:"-10px"}}>hemantchaurasia555@gmail.com</h5>
             <a href="mailto:hemantchaurasia555@gmail.com">Send a message</a>
           </article>
           <article className='contact__option'>
@@ -44,10 +67,10 @@ const Contacts = () => {
 
         <form ref={form}>
 
-         <input type="text" name="name" placeholder="Your Full Name" required />  {/* client side validation */}
-         <input type="email" name='email' placeholder='Your Email' required /> 
-         <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-         <button type="submit" className='btn btn-primary'>Send Message</button>
+         <input type="text" name="name" placeholder="Your Full Name" required onChange={e=>setFullName(e.target.value)}/>  {/* client side validation */}
+         <input type="email" name='email' placeholder='Your Email' required onChange={e=>setEmail(e.target.value)}/> 
+         <textarea name="message" rows="7" placeholder='Your Message' required onChange={e=>setMessage(e.target.value)}></textarea>
+         <button type="submit" className='btn btn-primary' onClick={handleSendMessage}>Send Message</button>
         </form>
       </div>    
     </section>
