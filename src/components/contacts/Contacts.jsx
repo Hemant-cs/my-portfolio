@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 // import emailjs from '@emailjs/browser';
 
-const Contacts = () => {
+const Contacts = ({setShowLoader, setSentSuccessful, setSentFail}) => {
 
   const form = useRef()
   //states
@@ -15,6 +15,7 @@ const Contacts = () => {
 
   //functions
   const handleSendMessage = (e) => {
+    setShowLoader(true);
     e.preventDefault();
     console.log(fullName, email, message);
     const emailData = {
@@ -29,14 +30,18 @@ const Contacts = () => {
       emailData,
       'cqpP-3wGHmgu6F0oD'       // from EmailJS dashboard
     ).then((result) => {
-      alert('Email sent successfully!');
+      setShowLoader(false);
+      setSentSuccessful(true);
       setEmail("");
-      setFullName("");
-      setMessage("");
+    setFullName("");
+    setMessage("");
     }, (error) => {
-      alert('Failed to send email. Try again.');
+      setShowLoader(false);
+      setSentFail(true);
+      setEmail("");
+    setFullName("");
+    setMessage("");
     });
-    
   }
 
   return (
@@ -65,12 +70,12 @@ const Contacts = () => {
           </article>
         </div>
 
-        <form ref={form}>
+        <form ref={form} onSubmit={handleSendMessage}>
 
-         <input type="text" name="name" placeholder="Your Full Name" required onChange={e=>setFullName(e.target.value)}/>  {/* client side validation */}
-         <input type="email" name='email' placeholder='Your Email' required onChange={e=>setEmail(e.target.value)}/> 
-         <textarea name="message" rows="7" placeholder='Your Message' required onChange={e=>setMessage(e.target.value)}></textarea>
-         <button type="submit" className='btn btn-primary' onClick={handleSendMessage}>Send Message</button>
+         <input type="text" name="name" placeholder="Your Full Name" required value = {fullName} onChange={e=>setFullName(e.target.value)}/>  {/* client side validation */}
+         <input type="email" name='email' placeholder='Your Email' required value={email} onChange={e=>setEmail(e.target.value)}/> 
+         <textarea name="message" rows="7" placeholder='Your Message' required value={message} onChange={e=>setMessage(e.target.value)}></textarea>
+         <button type="submit" className='btn btn-primary'>Send Message</button>
         </form>
       </div>    
     </section>
