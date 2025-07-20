@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.92ccbae5.css",
-    "main.js": "/my-portfolio/static/js/main.36ff3f21.js",
+    "main.css": "/my-portfolio/static/css/main.8b02cb79.css",
+    "main.js": "/my-portfolio/static/js/main.8d37ab4d.js",
     "static/media/my-image2.png": "/my-portfolio/static/media/my-image2.551dc0ef159139bdcb1d.png",
-    "static/media/me-new.png": "/my-portfolio/static/media/me-new.5d641b2330f7fdf3118c.png",
+    "static/media/me-new.png": "/my-portfolio/static/media/me-new.4f552a228720bb7c2b4f.png",
     "static/media/Hemant_resume2110.pdf": "/my-portfolio/static/media/Hemant_resume2110.d8e7c5d9ee76474d2f5e.pdf",
     "static/media/BMO-image.jpg": "/my-portfolio/static/media/BMO-image.5dbcf0b45824ef38d4e4.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.92ccbae5.css.map": "/my-portfolio/static/css/main.92ccbae5.css.map",
-    "main.36ff3f21.js.map": "/my-portfolio/static/js/main.36ff3f21.js.map"
+    "main.8b02cb79.css.map": "/my-portfolio/static/css/main.8b02cb79.css.map",
+    "main.8d37ab4d.js.map": "/my-portfolio/static/js/main.8d37ab4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.92ccbae5.css",
-    "static/js/main.36ff3f21.js"
+    "static/css/main.8b02cb79.css",
+    "static/js/main.8d37ab4d.js"
   ]
 }
