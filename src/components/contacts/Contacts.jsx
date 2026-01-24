@@ -60,8 +60,8 @@ const Contacts = ({setShowLoader, setSentSuccessful, setSentFail}) => {
           </article>
           <article className='contact__option'>
             <MdLocalPhone  className='contact__option-icon'/>
-            <h5>+91-9935522137</h5>
-            <a href="tel: +919935522137">Call</a>
+            <h5>+91-8920178286</h5>
+            <a href="tel: +918920178286">Call</a>
           </article>
           <article className='contact__option'>
             <MdLocationOn  className='contact__option-icon'/>
